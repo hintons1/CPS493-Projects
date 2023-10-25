@@ -57,12 +57,36 @@ const isActive = ref(false);
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <a class="button is-primary">
+              <RouterLink class="button is-primary" to="/signup">
                 <strong>Sign up</strong>
-              </a>
-              <a class="button is-light">
-                Log in
-              </a>
+              </RouterLink>
+              <div class="dropdown is-active">
+                <div class="dropdown-trigger">
+                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                    <span>Login</span>
+                    <span class="icon is-small">
+                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                  <div class="dropdown-content">
+                    <a href="#" class="dropdown-item">
+                      Shelby Hinton
+                    </a>
+                    <a class="dropdown-item">
+                      Dwayne Johnson
+                    </a>
+                    <a href="#" class="dropdown-item">
+                      Peter Dinklage
+                    </a>
+                    <hr class="dropdown-divider">
+                    <RouterLink to="/other-user" class="dropdown-item">
+                      Other User
+                    </RouterLink>
+                  </div>
+                </div>
+              </div>
               <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="https://bulma.io" target="_blank" href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=https://bulma.io&amp;via=jgthms">
                 <span class="icon">
                 <i class="fa fa-twitter"></i>
