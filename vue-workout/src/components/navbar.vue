@@ -65,12 +65,12 @@ const isActive = ref(false);
                   <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
                     <span>Login</span>
                     <span class="icon is-small">
-                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                      <i class="fas fa-angle-down" aria-hidden="true"></i>
                     </span>
                   </button>
                 </div>
                 <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                  <div class="dropdown-content">
+                  <div class="dropdown-content" >
                     <a href="#" class="dropdown-item">
                       Shelby Hinton
                     </a>
