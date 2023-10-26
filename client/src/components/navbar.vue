@@ -62,7 +62,7 @@ const isActive = ref(false);
               </RouterLink>
               <div class="dropdown is-active">
                 <div class="dropdown-trigger">
-                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu" onclick="myFunction()">
                     <span>Login</span>
                     <span class="icon is-small">
                       <i class="fas fa-angle-down" aria-hidden="true"></i>
@@ -70,7 +70,7 @@ const isActive = ref(false);
                   </button>
                 </div>
                 <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                  <div class="dropdown-content" >
+                  <div id="myDropdown" class="dropdown-content" >
                     <a href="#" class="dropdown-item">
                       Shelby Hinton
                     </a>
