@@ -60,31 +60,24 @@ const isActive = ref(false);
               <RouterLink class="button is-primary" to="/signup">
                 <strong>Sign up</strong>
               </RouterLink>
-              <div class="dropdown is-active">
-                <div class="dropdown-trigger">
-                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu" onclick="myFunction()">
-                    <span>Login</span>
-                    <span class="icon is-small">
-                      <i class="fas fa-angle-down" aria-hidden="true"></i>
-                    </span>
-                  </button>
-                </div>
-                <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                  <div id="myDropdown" class="dropdown-content" >
-                    <a href="#" class="dropdown-item">
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class = "navbar-link">
+                    Login
+                  </a>
+                <div class="navbar-dropdown">
+                    <a href="#" class="navbar-item">
                       Shelby Hinton
                     </a>
                     <a class="dropdown-item">
                       Dwayne Johnson
                     </a>
-                    <a href="#" class="dropdown-item">
+                    <a href="#" class="navbar-item">
                       Peter Dinklage
                     </a>
                     <hr class="dropdown-divider">
-                    <RouterLink to="/other-user" class="dropdown-item">
+                    <RouterLink to="/other-user" class="navbar-item">
                       Other User
                     </RouterLink>
-                  </div>
                 </div>
               </div>
               <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="https://bulma.io" target="_blank" href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=https://bulma.io&amp;via=jgthms">
