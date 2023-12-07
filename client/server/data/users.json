@@ -1,0 +1,31 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "firstName": "Shelby",
+            "lastName": "Hinton",
+            "email": "hintons1@newpaltz.edu",
+            "username": "ShelbyHinton",
+            "password": "9uQFF1Lh",
+            "admin": true
+        },
+        {
+            "id": 2,
+            "firstName": "Dwayne",
+            "lastName": "Johnson",
+            "email": "djohnson@therock.com",
+            "username": "TheRock",
+            "password": "CQutx25i8r",
+            "admin": false
+        },
+        {
+            "id": 3,
+            "firstName": "Peter",
+            "lastName": "Dinklage",
+            "email": "peter@dinklage.com",
+            "username": "PDinky",
+            "password": "OWsTbMUgFc",
+            "admin": false
+        }
+    ]
+}
