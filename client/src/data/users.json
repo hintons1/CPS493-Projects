@@ -6,7 +6,8 @@
             "lastName": "Hinton",
             "email": "hintons1@newpaltz.edu",
             "username": "ShelbyHinton",
-            "password": "9uQFF1Lh"
+            "password": "9uQFF1Lh",
+            "admin": true
         },
         {
             "id": 2,
@@ -14,7 +15,8 @@
             "lastName": "Johnson",
             "email": "djohnson@therock.com",
             "username": "TheRock",
-            "password": "CQutx25i8r"
+            "password": "CQutx25i8r",
+            "admin": false
         },
         {
             "id": 3,
@@ -22,7 +24,8 @@
             "lastName": "Dinklage",
             "email": "peter@dinklage.com",
             "username": "PDinky",
-            "password": "OWsTbMUgFc"
+            "password": "OWsTbMUgFc",
+            "admin": false
         }
     ]
 }

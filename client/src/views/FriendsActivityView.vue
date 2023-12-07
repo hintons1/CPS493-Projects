@@ -17,12 +17,12 @@ const toggle = (trigger: keyof typeof workoutForm.value) => {
         <div class="columns is-centered">
             <div class="column is-half">
                 <button class="button is-primary is-light is-outlined is-fullwidth" @click="() => toggle('formToggle')">Add Workout</button>
-                <div class="modal is-active" v-if="workoutForm.formToggle">
+                <div class="modal is-active" id="workoutModal" v-if="workoutForm.formToggle">
                     <div class="modal-background"></div>
                     <div class="modal-card">
                         <header class="modal-card-head">
                             <p class="modal-card-title">Add Workout</p>
-                            <button class="delete" aria-label="close"></button>
+                            <button class="delete" aria-label="close" @click="() => toggle('formToggle')"></button>
                         </header>
                         <section class="modal-card-body">
                         <label class="label">Title</label>
@@ -32,7 +32,7 @@ const toggle = (trigger: keyof typeof workoutForm.value) => {
                     <div class="field">
                         <label class="label">Date</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="mm/dd/yyyy">
+                            <input class="input" type="date" placeholder="mm/dd/yyyy">
                         </div>
                     </div>
                     <div class="field">
@@ -50,7 +50,7 @@ const toggle = (trigger: keyof typeof workoutForm.value) => {
                     <div class="field">
                         <label class="label">Picture</label>
                         <div class="control">
-                            <input class="input" type="text" placeholder="Text input">
+                            <input class="input" type="text">
                         </div>
                     </div>
                     <div class="field">
@@ -71,7 +71,7 @@ const toggle = (trigger: keyof typeof workoutForm.value) => {
                 </section>
                 <footer class="modal-card-foot">
                     <button class="button is-success">Save changes</button>
-                    <button class="button">Cancel</button>
+                    <button class="button" @click="() => toggle('formToggle')">Cancel</button>
                 </footer>
             </div>
         </div>
