@@ -2,7 +2,7 @@ import { reactive } from "vue";
 import { useRouter } from "vue-router"
 import { useToast } from "vue-toastification";
 import * as myFetch from "./myFetch";
-import { type User, getUserByEmail } from "./users";
+import type { User } from "./users";
 
 const toast = useToast();
 
@@ -16,16 +16,16 @@ const session = reactive({
   loading: 0
 })
 
-export function api(action: string, body?: unknown, method?: string, headers?: any){
+export function api(action: string, data?: unknown, method?: string, headers?: any){
   session.loading++;
 
-  if(session.token){
-    headers = headers ?? ();
+  if(session.user?.token){
+    headers = headers ?? {};
     headers['Authorization'] = `Bearer $(session.token)`;
   }
 
-  return myFetch.api(`${action}`, body, method)
-    .catch(err=> showError(err))
+  return myFetch.api(`${action}`, data, method)
+    .catch(err=> showErr(err))
     .finally(()=> session.loading--);
 }
 
@@ -33,7 +33,7 @@ export function getSession(){
   return session;
 }
 
-export function showError(err: any){
+export function showErr(err: any){
   console.error(err);
   session.messages.push({ type: "error", text: err.message ?? err});
   toast.error( err.message ?? err);
