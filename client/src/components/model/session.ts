@@ -1,4 +1,5 @@
 import { reactive } from "vue";
+import type { Exercise } from "./exercise";
 import { useRouter } from "vue-router"
 import { useToast } from "vue-toastification";
 import * as myFetch from "./myFetch";
@@ -53,4 +54,40 @@ export function useLogin(){
       router.push("/login");
     }
   }
+}
+
+export function addExercise(exercise: string, duration: number) {
+  if(exercise !== "" && duration > 0)
+ { session.user?.exercises.push({exercise, duration});}
+}
+
+export function removeExercise(exercise: Exercise) {
+  const index = session.user?.exercises.indexOf(exercise);
+  if (index !== undefined) {
+      session.user?.exercises.splice(index, 1);
+  }
+}
+
+export function getUsers(){
+  return api('users');
+}
+
+export function getUser(id: number){
+  return api(`users/${id}`)
+}
+
+export function createUser(user: User){
+  return api('users/', user, 'POST')
+}
+
+export function deleteUser(user: User){
+  return api(`users/`, undefined, 'DELETE')
+}
+
+export function login(user: User){
+  session.user = user;
+}
+
+export function logout() {
+  session.user = null;
 }

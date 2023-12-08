@@ -7,7 +7,21 @@
             "email": "hintons1@newpaltz.edu",
             "username": "ShelbyHinton",
             "password": "9uQFF1Lh",
-            "admin": true
+            "admin": true,
+            "exercises" : [
+                {
+                    "exercise": "Bike",
+                    "duration": 30
+                },
+                {
+                    "exercise": "Run",
+                    "duration": 60
+                },
+                {
+                    "exercise": "Walk",
+                    "duration": 40
+                }
+            ]
         },
         {
             "id": 2,
@@ -16,7 +30,21 @@
             "email": "djohnson@therock.com",
             "username": "TheRock",
             "password": "CQutx25i8r",
-            "admin": false
+            "admin": false,
+            "exercises" : [
+                {
+                    "exercise": "Strength",
+                    "duration": 120
+                },
+                {
+                    "exercise": "Strength",
+                    "duration": 160
+                },
+                {
+                    "exercise": "Strength",
+                    "duration": 140
+                }
+            ]
         },
         {
             "id": 3,
@@ -25,7 +53,21 @@
             "email": "peter@dinklage.com",
             "username": "PDinky",
             "password": "OWsTbMUgFc",
-            "admin": false
+            "admin": false,
+            "exercises" : [
+                {
+                    "exercise": "Walk",
+                    "duration": 45
+                },
+                {
+                    "exercise": "Strength",
+                    "duration": 15
+                },
+                {
+                    "exercise": "Bike",
+                    "duration": 90
+                }
+            ]
         }
     ]
 }

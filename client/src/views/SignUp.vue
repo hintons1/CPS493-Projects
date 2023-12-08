@@ -1,5 +1,12 @@
 <script setup lang="ts">
 
+import type { User } from '@/model/users';
+import { ref } from 'vue';
+import { useRoute } from 'vue-router';
+import { getUser, createUser } from '@/model/session';
+import {  loginWithUser, useSession } from '@/model/session';
+import router from '@/router';
+
 </script>
 <template>
 <div class="columns is-centered">

@@ -1,14 +1,16 @@
-[
-    {
-        "type": "Run",
-        "duration": "60 mins"
-    },
-    {
-        "type": "Bike",
-        "duration": "20 mins"
-    },
-    {
-        "type": "Walk",
-        "duration": "70 mins"
-    }
-]
+{
+    "exercises": [
+        {
+            "type": "Run",
+            "duration": "60 mins"
+        },
+        {
+            "type": "Bike",
+            "duration": "20 mins"
+        },
+        {
+            "type": "Walk",
+            "duration": "70 mins"
+        }
+    ]
+}

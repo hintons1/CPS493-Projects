@@ -8,6 +8,7 @@ export type User = {
     password: string,
     role: "admin" | "user",
     token?: string,
+    exercises?: any
 }
 
 export function getUser(): Promise< User[]> {
