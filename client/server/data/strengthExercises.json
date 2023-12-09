@@ -1,0 +1,16 @@
+{
+    "strength": [
+        {
+            "type": "Strength",
+            "weight": "100lbs"
+        },
+        {
+            "type": "Strength",
+            "weight": "215lbs"
+        },
+        {
+            "type": "Strength",
+            "weight": "175lbs"
+        }
+    ]
+}

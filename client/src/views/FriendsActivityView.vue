@@ -36,7 +36,7 @@ const toggle = (trigger: keyof typeof workoutForm.value) => {
                         </div>
                     </div>
                     <div class="field">
-                        <label class="label">Duration</label>
+                        <label class="label">Duration/Weight</label>
                         <div class="control">
                             <input class="input" type="text">
                         </div>

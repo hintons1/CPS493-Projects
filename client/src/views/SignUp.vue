@@ -3,7 +3,7 @@
 import type { User } from '@/model/users';
 import { ref } from 'vue';
 import { useRoute } from 'vue-router';
-import { getUser, createUser } from '@/model/session';
+import { getUser, createUser } from '@/model/session.ts';
 import {  loginWithUser, useSession } from '@/model/session';
 import router from '@/router';
 

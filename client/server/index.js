@@ -2,9 +2,7 @@ const express = require('express');
 const path = require('path');
 const users = require('./controllers/users');
 const app = express();
-const { parseAuthorization, requireLogin } = require('./middleware/authorization');
-
-const port = process.env.PORT || 3000;
+const { parseAuthorization } = require('./middleware/authorization');
 
 
 //For Middleware
