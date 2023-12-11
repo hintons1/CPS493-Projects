@@ -1,5 +1,6 @@
 import { reactive } from "vue";
-import type { Exercise } from "./exercise";
+import type { cardioExercise } from "./cardioExercise";
+import type { strengthExercise } from "./strengthExercise";
 import { useRouter } from "vue-router"
 import { useToast } from "vue-toastification";
 import * as myFetch from "./myFetch";
@@ -56,12 +57,24 @@ export function useLogin(){
   }
 }
 
-export function addExercise(exercise: string, duration: number) {
+export function addCardioExercise(exercise: string, duration: number) {
   if(exercise !== "" && duration > 0)
  { session.user?.exercises.push({exercise, duration});}
 }
 
-export function removeExercise(exercise: Exercise) {
+export function removeCardioExercise(exercise: cardioExercise) {
+  const index = session.user?.exercises.indexOf(exercise);
+  if (index !== undefined) {
+      session.user?.exercises.splice(index, 1);
+  }
+}
+
+export function addStrengthExercise(exercise: string, weight: number) {
+  if(exercise !== "" && weight > 0)
+ { session.user?.exercises.push({exercise, weight});}
+}
+
+export function removeStrengthExercise(exercise: strengthExercise) {
   const index = session.user?.exercises.indexOf(exercise);
   if (index !== undefined) {
       session.user?.exercises.splice(index, 1);

@@ -1,16 +1,16 @@
 import { reactive } from "vue";
 import exercises from "@/data/exercises.json";
 
-export interface Exercise{
+export interface strengthExercise{
     exercise: string;
-    duration: number;
+    weight: number;
 }
 
-export function getExercise(){
+export function getStrength(){
     return exercises;
 }
 
-export function returnExercises(){
+export function returnStrength(){
     const change = reactive({
         exercises: exercises
     });
