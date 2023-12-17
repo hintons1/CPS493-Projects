@@ -10,6 +10,7 @@ const toast = useToast();
 
 const session = reactive({
   user: null as User | null,
+  token: null as string | null,
   redirectUrl: null as string | null,
   messages: [] as {
     type: string,
@@ -46,13 +47,13 @@ export function useLogin(){
 
   return {
     async login(email: string, password: string): Promise< User | null> {
-      session.user = await api("users/login", { email, password });
+      const response = await api("users/login", { email, password });
+
+      session.user = response.user;
+      session.token = response.token;
+
       router.push(session.redirectUrl || "/");
       return session.user;
-    },
-    logout(){
-      session.user = null;
-      router.push("/login");
     }
   }
 }
@@ -95,10 +96,6 @@ export function createUser(user: User){
 
 export function deleteUser(user: User){
   return api(`users/`, undefined, 'DELETE')
-}
-
-export function login(user: User){
-  session.user = user;
 }
 
 export function logout() {
