@@ -6,6 +6,8 @@ import { type User } from '@/model/users';
 
 const session = getSession();
 
+
+
 </script>
 <template>
   <div class="table-container" v-if="User.role === 'admin'">

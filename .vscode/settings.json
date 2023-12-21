@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
+        "axios",
         "bulma",
         "bulmaio",
         "Dinklage",
@@ -9,7 +10,9 @@
         "hoverable",
         "jdoe",
         "nightwatch",
+        "Oruga",
         "Qutx",
-        "requireuser"
+        "requireuser",
+        "typeahead"
     ]
 }
