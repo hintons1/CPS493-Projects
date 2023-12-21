@@ -1,5 +1,13 @@
 <script setup lang="ts">
+
 import { ref } from 'vue';
+import { getSession, addCardioExercise, addStrengthExercise} from '@/model/session';
+import { type User } from '@/model/users';
+
+const session = getSession();
+const user = ref(session.user);
+
+
 
 const workoutForm = ref({
     formToggle: false
@@ -70,7 +78,7 @@ const toggle = (trigger: keyof typeof workoutForm.value) => {
                     </div>
                 </section>
                 <footer class="modal-card-foot">
-                    <button class="button is-success">Save changes</button>
+                    <button class="button is-success" @click=" () => toggle('formToggle')">Save changes</button>
                     <button class="button" @click="() => toggle('formToggle')">Cancel</button>
                 </footer>
             </div>

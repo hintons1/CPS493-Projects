@@ -22,12 +22,12 @@ const session = reactive({
 export function api(action: string, data?: unknown, method?: string, headers?: any){
   session.loading++;
 
-  if(session.user?.token){
+  if(session.token){
     headers = headers ?? {};
-    headers['Authorization'] = `Bearer $(session.token)`;
+    headers['Authorization'] = `Bearer ${session.token}`;
   }
 
-  return myFetch.api(`${action}`, data, method)
+  return myFetch.api(`${action}`, data, method, headers)
     .catch(err=> showErr(err))
     .finally(()=> session.loading--);
 }
@@ -42,7 +42,7 @@ export function showErr(err: any){
   toast.error( err.message ?? err);
 }
 
-export function useLogin(){
+export function useLogin() {
   const router = useRouter();
 
   return {
@@ -54,6 +54,10 @@ export function useLogin(){
 
       router.push(session.redirectUrl || "/");
       return session.user;
+    },
+    logout(){
+      session.user = null;
+      router.push("/login");
     }
   }
 }
@@ -90,14 +94,6 @@ export function getUser(id: number){
   return api(`users/${id}`)
 }
 
-export function createUser(user: User){
-  return api('users/', user, 'POST')
-}
-
 export function deleteUser(user: User){
   return api(`users/`, undefined, 'DELETE')
-}
-
-export function logout() {
-  session.user = null;
 }
